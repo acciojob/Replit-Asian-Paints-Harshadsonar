@@ -22,8 +22,8 @@
         <label for="block_id">Block ID:</label>
         <input type="text" id="block_id">
 
-        <label for="color_id">Color:</label>
-        <input type="color" id="color_id">
+        <label for="colour_id">Color:</label>
+        <input type="color" id="colour_id">
 
         <button id="change_button">Change</button>
         <button id="reset_button">Reset</button>
@@ -35,7 +35,7 @@
 
     changeButton.addEventListener('click', function() {
       const blockId = document.getElementById('block_id').value;
-      const color = document.getElementById('color_id').value;
+      const color = document.getElementById('colour_id').value;
 
       const block = document.getElementById(blockId);
       if (block) {
