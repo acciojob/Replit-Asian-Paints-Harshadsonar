@@ -27,6 +27,32 @@
 
         <button id="change_button">change button</button>
         <button id="reset_button">Reset</button>
+
+		 <script>
+    const changeButton = document.getElementById('change_button');
+    const resetButton = document.getElementById('reset_button');
+    const gridItems = document.getElementsByClassName('grid-item');
+
+    changeButton.addEventListener('click', function() {
+      const blockId = document.getElementById('block_id').value;
+      const color = document.getElementById('color_id').value;
+
+      const block = document.getElementById(blockId);
+      if (block) {
+        Array.from(gridItems).forEach(item => {
+          item.style.backgroundColor = 'transparent';
+        });
+
+        block.style.backgroundColor = color;
+      }
+    });
+
+    resetButton.addEventListener('click', function() {
+      Array.from(gridItems).forEach(item => {
+        item.style.backgroundColor = 'transparent';
+      });
+    });
+  </script>
     </div>
 
 </body>
