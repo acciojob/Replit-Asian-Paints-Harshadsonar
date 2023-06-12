@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="grid-container" id="grid-container">
+	<!-- the entire body must be written by student -->
+	 <input type="text" placeholder="Enter block id" id="block_id">
+    <input type="text" placeholder="Enter colour id" id="colour_id">
+
+    <button id="change_button">Change</button>
+    <button id="reset_button">Reset</button>
+
+    <div class="grid-container">
         <div class="grid-item" id="1">1</div>
         <div class="grid-item" id="2">2</div>
         <div class="grid-item" id="3">3</div>
@@ -17,43 +25,8 @@
         <div class="grid-item" id="8">8</div>
         <div class="grid-item" id="9">9</div>
     </div>
-
-    <div>
-        <label for="block_id">Block ID:</label>
-        <input type="text" id="block_id">
-
-        <label for="colour_id">Color:</label>
-        <input type="color" id="colour_id">
-
-        <button id="change_button">Change</button>
-        <button id="reset_button">Reset</button>
-
-		 <script>
-    const changeButton = document.getElementById('change_button');
-    const resetButton = document.getElementById('reset_button');
-    const gridItems = document.getElementsByClassName('grid-item');
-
-    changeButton.addEventListener('click', function() {
-      const blockId = document.getElementById('block_id').value;
-      const color = document.getElementById('colour_id').value;
-
-      const block = document.getElementById(blockId);
-      if (block) {
-        Array.from(gridItems).forEach(item => {
-          item.style.backgroundColor = 'transparent';
-        });
-
-        block.style.backgroundColor = color;
-      }
-    });
-
-    resetButton.addEventListener('click', function() {
-      Array.from(gridItems).forEach(item => {
-        item.style.backgroundColor = 'transparent';
-      });
-    });
-  </script>
-    </div>
+    <script type="text/javascript" src="./script.js">
+</script>
 
 </body>
 
